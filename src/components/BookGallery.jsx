@@ -18,13 +18,15 @@ export default function BookGallery() {
             Each masterwork is a self-contained case study in automated income efficiency. Together, they form the complete operating system for a sovereign digital estate.
           </p>
         </div>
-      </div>
 
-      <div className="flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-8 scrollbar-hide md:px-10 md:pl-[max(2.5rem,calc((100vw-80rem)/2+2.5rem))]">
-        {BOOKS.map((book, i) => (
-          <BookCard key={i} book={book} index={i} />
-        ))}
-        <div className="w-4 shrink-0 md:w-10" />
+        {/* RESPONSIVE LAYOUT CONTAINER ENGINE */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center items-stretch w-full">
+          {BOOKS.map((book, i) => (
+            <div key={i} className="w-full max-w-[280px] flex flex-col justify-between">
+              <BookCard book={book} index={i} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
