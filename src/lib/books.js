@@ -1,45 +1,89 @@
-export const BOOKS = [
-  {
-    module: "MODULE 01",
-    title: "ChatGPT Prompt Templates for Sales Pages",
-    subtitle: "The Complete Blueprint to Generate Converting Copy in Hours",
-    persona: "The Solopreneur & Coach",
-    for: "Solopreneurs, coaches, and small agency owners who need high-converting landing pages without hiring expensive copywriters.",
-    cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/10e536486_generated_8ad56799.jpg",
-    specs: { pages: 218, words: "47,000", frameworks: 12 },
-    blueprint: ["Prompt architecture for sales-page sections", "Headline, hook & CTA generators", "Hours-to-publish copy workflow"]
-  },
-  {
-    module: "MODULE 02",
-    title: "Psychological Triggers & Split-Testing Frameworks",
-    subtitle: "The Complete Blueprint to Optimize Sales Copy and Maximize AI Conversions",
-    persona: "The Everyday Operator",
-    for: "Everyday parents, professionals, and online entrepreneurs looking to turn raw text into automated income assets.",
-    cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/b9aaa14db_generated_b9307d24.jpg",
-    specs: { pages: 196, words: "41,500", frameworks: 9 },
-    blueprint: ["Trigger-mapping for buyer psychology", "A/B split-test sequencing", "Conversion-rate optimization loops"]
-  },
-  {
-    module: "MODULE 03",
-    title: "Adapting Templates for Multi-Offer Formats",
-    subtitle: "The Complete Blueprint to Package High-Ticket Courses, Services, and Info Products",
-    persona: "The Premium Creator",
-    for: "Coaches, digital creators, and consultants wanting to use automated AI copy to sell premium, high-ticket backend packages.",
-    cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/bcf0522c6_generated_bceb3c7f.jpg",
-    specs: { pages: 234, words: "52,000", frameworks: 11 },
-    blueprint: ["High-ticket offer packaging", "Multi-format template adaptation", "Backend ascension sequences"]
-  },
-  {
-    module: "MODULE 04",
-    title: "The Sovereign Freedom Blueprint",
-    subtitle: "An Engineer's Guide to Automated Digital Product Hubs and Passive Family Legacies",
-    persona: "The Sovereign Builder",
-    for: "Everyday parents, busy professionals, and action-takers looking to deploy 24/7 online assets with zero ongoing monthly platform fees.",
-    cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/f39b37fa5_generated_af926ee7.jpg",
-    specs: { pages: 276, words: "61,000", frameworks: 14 },
-    blueprint: ["Zero-fee digital hub architecture", "24/7 automated asset deployment", "Permanent family legacy systems"]
-  }
-];
+import React from 'react';
 
-export const AMAZON_LINK = "https://www.amazon.com/author/stephenvnguyen";
-export const WEBSITE_LINK = "https://shopreverena.com";
+export default function BookCard({ book, index }) {
+  // Pad the index format to read 01, 02, etc. safely
+  const displayIndex = String(index + 1).padStart(2, '0');
+
+  // Unified asset mapping backup parameters
+  const fallbackCovers = {
+    "MODULE 01": "https://githubusercontent.com",
+    "MODULE 02": "https://githubusercontent.com",
+    "MODULE 03": "https://githubusercontent.com",
+    "MODULE 04": "https://githubusercontent.com"
+  };
+
+  // Extract the true image path using your exact database parameters
+  const targetCover = book.cover || book.image || fallbackCovers[book.module];
+
+  return (
+    <div className="relative w-full flex flex-col justify-between bg-onyx-light border border-white/5 rounded-lg p-6 shadow-xl hover:border-gold/30 transition-all duration-300 group min-h-[480px]">
+      
+      {/* ➕ THE PREMIUM DARK-GOLD FLOATING DESIGN TAG */}
+      <div className="absolute top-4 right-4 text-gold font-mono text-sm opacity-60 group-hover:opacity-100 transition-opacity select-none">
+        +
+      </div>
+
+      {/* TOP CONTENT MATRIX BLOCK */}
+      <div className="relative w-full">
+        {/* STRUCTURAL INDEX NUMBER TRACK */}
+        <p className="font-mono text-xs uppercase tracking-widest text-gold/60 mb-2">
+          {book.module || `MODULE ${displayIndex}`}
+        </p>
+        
+        {/* MASTERWORK BOOK TITLE */}
+        <h3 className="font-heading text-xl font-light text-foreground group-hover:text-gold transition-colors duration-300 mb-1 line-clamp-2 min-h-[56px]">
+          {book.title}
+        </h3>
+        
+        {/* TARGET DEMOGRAPHIC TARGET AUDIENCE LINK */}
+        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-6 line-clamp-1">
+          For: {book.persona || "Sovereign Operator"}
+        </p>
+
+        {/* 📚 PREMIUM BOOK COVERS DISPLAY TRACK CONTAINER */}
+        <div className="relative w-full h-[260px] flex items-center justify-center mb-6 overflow-hidden rounded bg-black/40 p-4 border border-white/5 shadow-inner">
+          <img 
+            src={targetCover} 
+            alt={book.title} 
+            className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            onError={(e) => {
+              // Automatic network failover layer back straight to repository root
+              e.target.src = fallbackCovers[book.module];
+            }}
+          />
+        </div>
+      </div>
+
+      {/* BOTTOM METRIC AND ACTION ROW TRAIL */}
+      <div className="relative w-full mt-auto">
+        {/* SPECIFICATION CHIP ROWS */}
+        <div className="grid grid-cols-3 gap-2 border-t border-b border-white/5 py-3 mb-6 text-center text-[11px] font-mono text-muted-foreground bg-black/20 rounded">
+          <div>
+            <span className="block text-foreground font-medium">{book.specs?.pages || "—"}</span>
+            pp
+          </div>
+          <div className="border-l border-r border-white/5">
+            <span className="block text-foreground font-medium">{book.specs?.words || "—"}</span>
+            words
+          </div>
+          <div>
+            <span className="block text-foreground font-medium">{book.specs?.frameworks || "—"}</span>
+            frameworks
+          </div>
+        </div>
+
+        {/* PRIMARY CONVERSION ACTION NAVIGATION ROUTE BUTTON */}
+        <a 
+          href="https://amazon.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex w-full items-center justify-center bg-transparent border border-gold/40 text-gold hover:bg-gold hover:text-onyx text-xs font-mono uppercase tracking-widest py-3 px-4 rounded transition-all duration-300 font-semibold"
+        >
+          Acquire
+        </a>
+      </div>
+
+    </div>
+  );
+}
