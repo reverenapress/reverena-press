@@ -50,7 +50,7 @@ export default function BookCard({ book, index }) {
             className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
             onError={(e) => {
-              // Failover safety layer
+              // Failover safety layer path fallback track execution
               e.target.src = repositoryCovers[currentModule];
             }}
           />
