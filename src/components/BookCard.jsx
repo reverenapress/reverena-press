@@ -1,17 +1,21 @@
 import React from 'react';
 
 export default function BookCard({ book, index }) {
-  // Safe default fallback images pulled directly from your secure repository asset layer
-  const repositoryCovers = {
-    "MODULE 01": "https://githubusercontent.com",
-    "MODULE 02": "https://githubusercontent.com",
-    "MODULE 03": "https://githubusercontent.com",
-    "MODULE 04": "https://githubusercontent.com"
+  // 📦 MAP NATIVE SECURE LOCAL PATH TARGETS INSIDE YOUR BUILD BUNDLE
+  // This tells Vite to resolve the files straight from your uploaded src/assets folder
+  const localCovers = {
+    "MODULE 01": "/src/assets/module01.png",
+    "MODULE 02": "/src/assets/module02.png",
+    "MODULE 03": "/src/assets/module03.png",
+    "MODULE 04": "/src/assets/module04.png"
   };
 
   // Harmonize all possible object parameter naming track variations
   const currentModule = book.module || `MODULE ${String(index + 1).padStart(2, '0')}`;
-  const targetCover = repositoryCovers[currentModule];
+  
+  // Enforce native path fallback tracking to kill the cross-origin browser block
+  const targetCover = localCovers[currentModule] || book.cover || "/src/assets/module01.png";
+  
   const targetAudience = book.persona || book.audience || book.for || "Sovereign Operator";
   const pageCount = book.specs?.pages || book.pages || "—";
   const wordCount = book.specs?.words || book.words || "—";
@@ -49,10 +53,6 @@ export default function BookCard({ book, index }) {
             alt={book.title} 
             className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
-            onError={(e) => {
-              // Failover safety layer path fallback track execution
-              e.target.src = repositoryCovers[currentModule];
-            }}
           />
         </div>
       </div>
@@ -89,4 +89,3 @@ export default function BookCard({ book, index }) {
     </div>
   );
 }
-
