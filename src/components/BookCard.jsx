@@ -1,20 +1,19 @@
 import React from 'react';
 
 export default function BookCard({ book, index }) {
-  // 📦 MAP NATIVE SECURE LOCAL PATH TARGETS INSIDE YOUR BUILD BUNDLE
-  // This tells Vite to resolve the files straight from your uploaded src/assets folder
-  const localCovers = {
-    "MODULE 01": "/src/assets/module01.png",
-    "MODULE 02": "/src/assets/module02.png",
-    "MODULE 03": "/src/assets/module03.png",
-    "MODULE 04": "/src/assets/module04.png"
+  // Safe default backup image repository layer paths if external links fail
+  const repositoryCovers = {
+    "MODULE 01": "https://githubusercontent.com",
+    "MODULE 02": "https://githubusercontent.com",
+    "MODULE 03": "https://githubusercontent.com",
+    "MODULE 04": "https://githubusercontent.com"
   };
 
-  // Harmonize all possible object parameter naming track variations
+  // Harmonize all object variations to capture your exact books.js properties
   const currentModule = book.module || `MODULE ${String(index + 1).padStart(2, '0')}`;
   
-  // Enforce native path fallback tracking to kill the cross-origin browser block
-  const targetCover = localCovers[currentModule] || book.cover || "/src/assets/module01.png";
+  // CRITICAL FIX: Direct the engine to read the exact book.cover links you just pasted!
+  const targetCover = book.cover || book.image || repositoryCovers[currentModule];
   
   const targetAudience = book.persona || book.audience || book.for || "Sovereign Operator";
   const pageCount = book.specs?.pages || book.pages || "—";
@@ -53,6 +52,10 @@ export default function BookCard({ book, index }) {
             alt={book.title} 
             className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={(e) => {
+              // Failover safety track: If Base44 servers block cross-origin, serve the raw repo link
+              e.target.src = repositoryCovers[currentModule];
+            }}
           />
         </div>
       </div>
