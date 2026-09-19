@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function BookCard({ book, index }) {
-  // Safe default fallback images pulled straight from your repository asset layer
+  // Safe default fallback images pulled directly from your secure repository asset layer
   const repositoryCovers = {
     "MODULE 01": "https://githubusercontent.com",
     "MODULE 02": "https://githubusercontent.com",
@@ -11,7 +11,7 @@ export default function BookCard({ book, index }) {
 
   // Harmonize all possible object parameter naming track variations
   const currentModule = book.module || `MODULE ${String(index + 1).padStart(2, '0')}`;
-  const targetCover = repositoryCovers[currentModule] || book.cover || book.image;
+  const targetCover = repositoryCovers[currentModule];
   const targetAudience = book.persona || book.audience || book.for || "Sovereign Operator";
   const pageCount = book.specs?.pages || book.pages || "—";
   const wordCount = book.specs?.words || book.words || "—";
@@ -50,7 +50,7 @@ export default function BookCard({ book, index }) {
             className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
             onError={(e) => {
-              // Automatic network failover layer back straight to repository root
+              // Failover safety layer
               e.target.src = repositoryCovers[currentModule];
             }}
           />
