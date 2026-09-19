@@ -12,7 +12,7 @@ export default function BookCard({ book, index }) {
   // Harmonize all object variations to capture your exact books.js properties
   const currentModule = book.module || `MODULE ${String(index + 1).padStart(2, '0')}`;
   
-  // CRITICAL FIX: Direct the engine to read the exact book.cover links you just pasted!
+  // Direct the engine to read the exact book.cover links you restored
   const targetCover = book.cover || book.image || repositoryCovers[currentModule];
   
   const targetAudience = book.persona || book.audience || book.for || "Sovereign Operator";
@@ -46,14 +46,14 @@ export default function BookCard({ book, index }) {
         </p>
 
         {/* 📚 PREMIUM BOOK COVERS DISPLAY TRACK CONTAINER */}
-        <div className="relative w-full h-[260px] flex items-center justify-center mb-6 overflow-hidden rounded bg-black/40 p-4 border border-white/5 shadow-inner">
+        <div className="relative w-full h-[260px] flex items-center justify-center mb-6 overflow-hidden rounded bg-black/40 border border-white/5 shadow-inner">
           <img 
             src={targetCover} 
             alt={book.title} 
-            className="max-h-full max-w-[170px] w-auto h-auto object-contain shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+            /* FIXED: Changed object-contain to object-cover and widened dimensions to fit the frame smoothly */
+            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
             onError={(e) => {
-              // Failover safety track: If Base44 servers block cross-origin, serve the raw repo link
               e.target.src = repositoryCovers[currentModule];
             }}
           />
@@ -92,3 +92,4 @@ export default function BookCard({ book, index }) {
     </div>
   );
 }
+
