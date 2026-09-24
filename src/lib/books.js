@@ -7,7 +7,8 @@ export const BOOKS = [
     for: "Solopreneurs, coaches, and small agency owners who need high-converting landing pages without hiring expensive copywriters.",
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/10e536486_generated_8ad56799.jpg",
     specs: { pages: 218, words: "47,000", frameworks: 12 },
-    blueprint: ["Prompt architecture for sales-page sections", "Headline, hook & CTA generators", "Hours-to-publish copy workflow"]
+    blueprint: ["Prompt architecture for sales-page sections", "Headline, hook & CTA generators", "Hours-to-publish copy workflow"],
+    amazonUrl: "https://www.amazon.com/dp/B0HKKMLF23" // <-- Replace with your live live Module 01 link
   },
   {
     module: "MODULE 02",
@@ -17,7 +18,8 @@ export const BOOKS = [
     for: "Everyday parents, professionals, and online entrepreneurs looking to turn raw text into automated income assets.",
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/b9aaa14db_generated_b9307d24.jpg",
     specs: { pages: 196, words: "41,500", frameworks: 9 },
-    blueprint: ["Trigger-mapping for buyer psychology", "A/B split-test sequencing", "Conversion-rate optimization loops"]
+    blueprint: ["Trigger-mapping for buyer psychology", "A/B split-test sequencing", "Conversion-rate optimization loops"],
+    amazonUrl: "https://www.amazon.com/dp/B0HKQLBBYB" // <-- Replace with your live Module 02 link
   },
   {
     module: "MODULE 03",
@@ -27,7 +29,8 @@ export const BOOKS = [
     for: "Coaches, digital creators, and consultants wanting to use automated AI copy to sell premium, high-ticket backend packages.",
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/bcf0522c6_generated_bceb3c7f.jpg",
     specs: { pages: 234, words: "52,000", frameworks: 11 },
-    blueprint: ["High-ticket offer packaging", "Multi-format template adaptation", "Backend ascension sequences"]
+    blueprint: ["High-ticket offer packaging", "Multi-format template adaptation", "Backend ascension sequences"],
+    amazonUrl: "https://www.amazon.com/author/stephenvnguyen" // <-- Temporarily defaults to your author profile page
   },
   {
     module: "MODULE 04",
@@ -37,7 +40,8 @@ export const BOOKS = [
     for: "Everyday parents, busy professionals, and action-takers looking to deploy 24/7 online assets with zero ongoing monthly platform fees.",
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/f39b37fa5_generated_af926ee7.jpg",
     specs: { pages: 276, words: "61,000", frameworks: 14 },
-    blueprint: ["Zero-fee digital hub architecture", "24/7 automated asset deployment", "Permanent family legacy systems"]
+    blueprint: ["Zero-fee digital hub architecture", "24/7 automated asset deployment", "Permanent family legacy systems"],
+    amazonUrl: "https://www.amazon.com/author/stephenvnguyen" // <-- Temporarily defaults to your author profile page
   }
 ];
 
