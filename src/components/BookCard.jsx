@@ -80,7 +80,7 @@ export default function BookCard({ book, index }) {
 
         {/* PRIMARY CONVERSION ACTION NAVIGATION ROUTE BUTTON */}
         <a 
-          href="https://amazon.com" 
+          href="https://author.amazon.com/books/editionsMaster?titleset=B0HKM27135&marketplace=ATVPDKIKX0DER" 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex w-full items-center justify-center bg-transparent border border-gold/40 text-gold hover:bg-gold hover:text-onyx text-xs font-mono uppercase tracking-widest py-3 px-4 rounded transition-all duration-300 font-semibold"
