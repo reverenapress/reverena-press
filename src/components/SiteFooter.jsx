@@ -15,7 +15,7 @@ export default function SiteFooter() {
               <span className="font-display text-xl italic text-foreground">Reverena Press</span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Stephen V. Nguyen | Digital Product Hub & Systems Automation. Engineering the architecture of sovereignty — one automated asset at a time.
+              Stephen Nguyen | Digital Product Hub & Systems Automation. Engineering the architecture of sovereignty — one automated asset at a time.
             </p>
             <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-gold/60">
               Core Imprint · Reverena Press
@@ -53,7 +53,7 @@ export default function SiteFooter() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gold/10 py-8 md:flex-row">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">
-            © {new Date().getFullYear()} Stephen V. Nguyen · Reverena Press · All rights reserved
+            © {new Date().getFullYear()} Stephen Nguyen · Reverena Press · All rights reserved
           </p>
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/50">
             Earn Daily · Systems Automation · Family Legacy
