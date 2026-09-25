@@ -23,7 +23,7 @@ export default function Philosophy() {
               From <span className="font-display italic text-muted-foreground">complexity</span> to <span className="font-display italic text-gold">automation.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Stephen V. Nguyen spent three decades as an engineer before founding Reverena Press. The Blueprint Protocol distills that engineering precision into a repeatable system — one that transforms raw AI capability into a sovereign, automated digital estate for the everyday professional.
+              Stephen Nguyen spent three decades as an engineer before founding Reverena Press. The Blueprint Protocol distills that engineering precision into a repeatable system — one that transforms raw AI capability into a sovereign, automated digital estate for the everyday professional.
             </p>
             <div className="mt-12 grid gap-px border border-gold/15 bg-gold/15 sm:grid-cols-2">
               {PILLARS.map((p) => (
