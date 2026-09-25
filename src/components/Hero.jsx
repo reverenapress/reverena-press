@@ -41,7 +41,7 @@ export default function Hero() {
             <span className="font-display italic font-medium text-gold">over</span> STRIFE
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            A four-module masterworks library by Stephen V. Nguyen — 30-year engineer turned digital hub founder. Deploy a done-for-you sales funnel, master AI copywriting for sales pages, and build a permanent family legacy.
+            A four-module masterworks library by Stephen Nguyen — 30-year engineer turned digital hub founder. Deploy a done-for-you sales funnel, master AI copywriting for sales pages, and build a permanent family legacy.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a href="#repository" className="scan-btn group inline-flex items-center justify-center gap-2 bg-gold px-8 py-4 font-mono text-xs uppercase tracking-[0.2em] text-onyx transition-colors">
