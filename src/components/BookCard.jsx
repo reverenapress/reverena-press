@@ -1,5 +1,5 @@
 import React from 'react';
-import { AMAZON_LINK } from './books'; 
+import { AMAZON_LINK } from '../lib/books'; 
 
 export default function BookCard({ book, index }) {
   // Safe default backup image repository paths if external links fail
