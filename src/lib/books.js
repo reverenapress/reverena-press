@@ -9,6 +9,7 @@ export const BOOKS = [
     specs: { pages: 218, words: "47,000", frameworks: 12 },
     blueprint: ["Prompt architecture for sales-page sections", "Headline, hook & CTA generators", "Hours-to-publish copy workflow"],
     amazonUrl: "https://www.amazon.com/dp/B0HKKMLF23" // <-- Replace with your live live Module 01 link
+    paperbackUrl: "https://amazon.com/dp/B0HKQFV2TZ" // <-- ADD THIS LINE FOR PAPERBACKS
   },
   {
     module: "MODULE 02",
@@ -20,6 +21,7 @@ export const BOOKS = [
     specs: { pages: 196, words: "41,500", frameworks: 9 },
     blueprint: ["Trigger-mapping for buyer psychology", "A/B split-test sequencing", "Conversion-rate optimization loops"],
     amazonUrl: "https://www.amazon.com/dp/B0HKQLBBYB" // <-- Replace with your live Module 02 link
+    paperbackUrl: "https://amazon.com/dp/B0HKR99H3S" // <-- ADD THIS LINE FOR PAPERBACKS
   },
   {
     module: "MODULE 03",
@@ -30,7 +32,8 @@ export const BOOKS = [
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/bcf0522c6_generated_bceb3c7f.jpg",
     specs: { pages: 234, words: "52,000", frameworks: 11 },
     blueprint: ["High-ticket offer packaging", "Multi-format template adaptation", "Backend ascension sequences"],
-    amazonUrl: "https://www.amazon.com/author/stephenvnguyen" // <-- Temporarily defaults to your author profile page
+    amazonUrl: "https://www.amazon.com/dp/B0HL78GRDN" // <-- Temporarily defaults to your author profile page
+    paperbackUrl: "https://amazon.com/dp/" // <-- ADD THIS LINE FOR PAPERBACKS
   },
   {
     module: "MODULE 04",
@@ -41,7 +44,8 @@ export const BOOKS = [
     cover: "https://media.base44.com/images/public/6aabce3312d532ba80bd7a1a/f39b37fa5_generated_af926ee7.jpg",
     specs: { pages: 276, words: "61,000", frameworks: 14 },
     blueprint: ["Zero-fee digital hub architecture", "24/7 automated asset deployment", "Permanent family legacy systems"],
-    amazonUrl: "https://www.amazon.com/author/stephenvnguyen" // <-- Temporarily defaults to your author profile page
+    amazonUrl: "https://www.amazon.com/dp/B0HL7744MN" // <-- Temporarily defaults to your author profile page
+    paperbackUrl: "https://amazon.com/dp/" // <-- ADD THIS LINE FOR PAPERBACKS
   }
 ];
 
