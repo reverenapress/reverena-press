@@ -33,7 +33,7 @@ export const BOOKS = [
     specs: { pages: 234, words: "52,000", frameworks: 11 },
     blueprint: ["High-ticket offer packaging", "Multi-format template adaptation", "Backend ascension sequences"],
     amazonUrl: "https://www.amazon.com/dp/B0HL78GRDN" // <-- Temporarily defaults to your author profile page
-    paperbackUrl: "https://www.amazon.com/dp/" // <-- ADD THIS LINE FOR PAPERBACKS
+    paperbackUrl: "https://www.amazon.com/dp/B0HLBD3423" // <-- ADD THIS LINE FOR PAPERBACKS
   },
   {
     module: "MODULE 04",
@@ -45,7 +45,7 @@ export const BOOKS = [
     specs: { pages: 276, words: "61,000", frameworks: 14 },
     blueprint: ["Zero-fee digital hub architecture", "24/7 automated asset deployment", "Permanent family legacy systems"],
     amazonUrl: "https://www.amazon.com/dp/B0HL7744MN" // <-- Temporarily defaults to your author profile page
-    paperbackUrl: "https://www.amazon.com/dp/" // <-- ADD THIS LINE FOR PAPERBACKS
+    paperbackUrl: "https://www.amazon.com/dp/B0HLBKM7QZ" // <-- ADD THIS LINE FOR PAPERBACKS
   }
 ];
 
