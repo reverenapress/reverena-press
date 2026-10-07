@@ -51,3 +51,4 @@ export const BOOKS = [
 
 export const AMAZON_LINK = "https://www.amazon.com/author/stephenvnguyen";
 export const WEBSITE_LINK = "https://shopreverena.com";
+export const WEBSITE_LINK_EARNDAILY = "https://earndaily.shopreverena.com";
