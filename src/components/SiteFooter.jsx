@@ -47,6 +47,7 @@ export default function SiteFooter() {
               <li><a href={WEBSITE_LINK} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-gold">ShopReverena.com</a></li>
               <li><a href="#repository" className="text-muted-foreground transition-colors hover:text-gold">Blueprint Repository</a></li>
               <li><a href="#exit" className="text-muted-foreground transition-colors hover:text-gold">Master Book Blueprint</a></li>
+              <li><a href={WEBSITE_LINK_EARNDAILY} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-gold">Earn Daily Program</a></li>
             </ul>
           </div>
         </div>
