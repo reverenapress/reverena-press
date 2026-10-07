@@ -1,4 +1,4 @@
-import { BOOKS, AMAZON_LINK, WEBSITE_LINK } from "@/lib/books";
+import { BOOKS, AMAZON_LINK, WEBSITE_LINK, WEBSITE_LINK_EARNDAILY } from "@/lib/books";
 
 export default function SiteFooter() {
   const totalWords = BOOKS.reduce((acc, b) => acc + parseInt(b.specs.words.replace(/,/g, "")), 0);
